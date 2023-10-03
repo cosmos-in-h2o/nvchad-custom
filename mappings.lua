@@ -94,6 +94,13 @@ M.flash = {
     },
 }
 
+M.dap = {
+    n = {
+        ["<leader>db"] = { "<cmd>DapToggleBreakpoint<CR>", "add breakpoint at line" },
+        ["<leader>dr"] = { "<cmd>DapContinue<CR>", "start or continue the debugger" },
+    },
+}
+
 -- more keybinds!
 
 return M

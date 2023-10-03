@@ -10,6 +10,8 @@ M.treesitter = {
         "typescript",
         "tsx",
         "c",
+        "cpp",
+        "lua",
         "markdown",
         "markdown_inline",
     },
@@ -29,8 +31,8 @@ M.mason = {
         -- python
         "pyright",
         -- c/cpp stuff
-        "clangd",
-        "clang-format",
+        -- "clangd",
+        -- "clang-format",
         -- rust
         "rust_analyzer",
         -- json
