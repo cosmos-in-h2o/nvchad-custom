@@ -4,7 +4,7 @@ local capabilities = require("plugins.configs.lspconfig").capabilities
 local lspconfig = require "lspconfig"
 
 -- if you just want default config for the servers then put them in a table
-local servers = { "lua_ls", "pyright", "clangd", "rust_analyzer", "jsonls" }
+local servers = { "lua_ls", "pyright", "rust_analyzer", "jsonls" }
 
 for _, lsp in ipairs(servers) do
     lspconfig[lsp].setup {
@@ -13,5 +13,8 @@ for _, lsp in ipairs(servers) do
     }
 end
 
+local capabilities = vim.lsp.protocol.make_client_capabilities()
+capabilities.offsetEncoding = { "utf-16" }
+require("lspconfig").clangd.setup({ capabilities = capabilities })
 --
 -- lspconfig.pyright.setup { blabla}
